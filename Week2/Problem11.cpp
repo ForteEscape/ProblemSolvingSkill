@@ -76,10 +76,16 @@ int main() {
 			}
 			else {
 				if (posx2 < posx3) {
-					straightFlag = 1;
+					if (posx2 < 0 && posx3 > 0) {
+						uTurnFlag = 1;
+					}
+					else straightFlag = 1;
 				}
 				else if (posx2 > posx3) {
-					uTurnFlag = 1;
+					if (posx2 < 0 && posx3 > 0) {
+						straightFlag = 1;
+					}
+					else uTurnFlag = 1;
 				}
 			}
 		}
